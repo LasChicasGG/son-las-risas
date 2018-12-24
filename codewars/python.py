@@ -17,6 +17,10 @@ class _():
     return _()
   def __rmod__(self, _):
     return _()
+  def __getattr__(self, _):
+    def fn(*args, **kwargs):
+      return _()
+    return fn
 
 def fn(*args, **kwargs):
-  return A()
+  return _()
